@@ -13,7 +13,7 @@ public class Main {
         try {
             test.check(a, b, c);
             System.out.println("Day la tam giac");
-        } catch (Exception e) {
+        } catch (IllegalTriangleException e) {
             System.err.println(test.message());
         }
     }
