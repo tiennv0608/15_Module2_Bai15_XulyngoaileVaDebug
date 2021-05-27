@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class IllegalTriangleException extends Exception {
@@ -5,7 +6,7 @@ public class IllegalTriangleException extends Exception {
         return "Khong la tam giac";
     }
 
-    public void check(int side1, int side2, int side3) throws IllegalTriangleException {
+    public void check(Integer side1, Integer side2, Integer side3) throws IllegalTriangleException {
         if (side1 <= 0 || side2 <= 0 || side3 <= 0) throw new IllegalTriangleException();
         if (!(side1 + side2 > side3) || !(side2 + side3 > side1) ||
                 !(side1 + side3 > side2)) throw new IllegalTriangleException();
